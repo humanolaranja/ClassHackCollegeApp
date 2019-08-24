@@ -1,38 +1,20 @@
 {
   "eventos": [
     {
-      "id": 1,
-      "titulo": "Beethoven para o futuro propõe diálogo com a composição contemporânea brasileira",
-      "id_instituto": 1,
-      "id_usuario": 2,
+      "titulo": "Beethoven para o futuro do presente",
       "local": "Instituto de Artes  - Rua Elis Regina, 50 Cidade Universitária - Zeferino Vaz, Campinas - SP, 13083-854",
       "data": "13/08/2019",
-      "hora_inicial": "19:00",
-      "hora_final": "21:00",
-      "preco": 0,
-      "descricao": "O ciclo de sonatas de Beethoven para violoncelo e piano pode ser apreciado em sua totalidade esta semana, em Campinas.",
-      "categoria" : 2,
-      "url": "https://www.unicamp.br/unicamp/noticias/2019/08/13/beethoven-para-o-futuro-propoe-dialogo-com-composicao-contemporanea-brasileira",
-      "likedby": [1,2]
+      "id": 1
     },
     {
-      "id": 2,
-      "titulo": "Congresso de Ciências do Trabalho, Meio Ambiente, Direito e Saúde terá a participação de docentes da Unicamp",
-      "id_instituto": 1,
-      "id_usuario": 2,
+      "titulo": "Congresso de Ciências do Trabalho, Meio Ambiente, Direito e Saúde",
       "local": "Largo São Francisco, 95 - Centro, São Paulo - SP, 01005-010",
-      "data": "26/08/19",
-      "hora_inicial": "14:00",
-      "hora_final": "16:00",
-      "preco": 0,
-      "descricao": "No evento, o professor Ricardo Antunes (Unicamp) abordará o tema “Uberização do trabalho. Já o médico Gastão Wagner (Unicamp) falará sobre “A Previdência e a Saúde”.",
-      "categoria" : 2,
-      "url": "https://www.congressointernacionaldotrabalho.com/como-chegar",
-      "likedby": [1,2]
+      "data": "26/08/20",
+      "id": 2
     },
     {
       "id": 3,
-      "titulo": "III Encontro Nacional das Equipes de Ajuda no Brasil",
+      "titulo": "Encontro Nacional das Equipes de Ajuda no Brasil",
       "id_instituto": 23,
       "id_usuario": 3,
       "local": "Avenida Érico Veríssimo, 500 Cidade Universitária, Zeferino Vaz - Barão Geraldo, Campinas - SP, 13083-851",
@@ -41,173 +23,191 @@
       "hora_final": "17:00",
       "preco": 0,
       "descricao": "Em sua III edição, o Encontro Nacional de Equipes de Ajuda pretende reunir jovens e profissionais da educação. Apoiados em leis brasileiras que apontam para a necessária “Educação para a paz”.",
-      "categoria" : 1,
+      "categoria": 1,
       "url": "https://www.fe.unicamp.br/eventos/agenda-de-eventos/iii-encontro-nacional-das-equipes-de-ajuda-no-brasil",
-      "likedby": [1,2]
+      "likedby": [
+        1,
+        2
+      ]
+    },
+    {
+      "titulo": "ClassHack",
+      "id": 4
+    },
+    {
+      "titulo": "Rock",
+      "local": "Rio de Janeiro - RJ",
+      "data": "10/10/2019",
+      "id": 5
     }
   ],
-  "usuarios":[
-      {
-          "nome": "Humano",
-          "email":"humano@unicamp.br",
-          "instituto":3,
-          "flag_instituto": true
-      },
-      {
-        "nome": "Camila",
-        "email":"camila@unicamp.br",
-        "instituto":20,
-        "flag_instituto": false
-      },
-      {
-        "nome": "Daniel",
-        "email":"daniel@unicamp.br",
-        "instituto":16,
-        "flag_instituto": false
-      }
+  "usuarios": [
+    {
+      "nome": "Humano",
+      "email": "humano@unicamp.br",
+      "instituto": 3,
+      "flag_instituto": true
+    },
+    {
+      "nome": "Camila",
+      "email": "camila@unicamp.br",
+      "instituto": 20,
+      "flag_instituto": false
+    },
+    {
+      "nome": "Daniel",
+      "email": "daniel@unicamp.br",
+      "instituto": 16,
+      "flag_instituto": false
+    }
   ],
   "institutos": [
-      {
-        "id": 1,
-        "nome_instituto": "Artes",
-        "sigla":"IA"
-      },
-      {
-        "id": 2,
-        "nome_instituto": "Instituto de Biologia",
-        "sigla":"IB"
+    {
+      "id": 1,
+      "nome_instituto": "Artes",
+      "sigla": "IA"
     },
     {
-        "id": 3,
-        "nome_instituto": "Instituto de Computação",
-        "sigla":"IC"
+      "id": 2,
+      "nome_instituto": "Instituto de Biologia",
+      "sigla": "IB"
     },
     {
-        "id": 4,
-        "nome_instituto": "Instituto de Economia",
-        "sigla":"IE"
+      "id": 3,
+      "nome_instituto": "Instituto de Computação",
+      "sigla": "IC"
     },
     {
-        "id": 5,
-        "nome_instituto": "Instituto de Estudos da Linguaguem",
-        "sigla":"IEL"
+      "id": 4,
+      "nome_instituto": "Instituto de Economia",
+      "sigla": "IE"
     },
     {
-        "id": 6,
-        "nome_instituto": "Instituto de Filosofia e Ciências Humanas",
-        "sigla":"IFCH"
+      "id": 5,
+      "nome_instituto": "Instituto de Estudos da Linguaguem",
+      "sigla": "IEL"
     },
     {
-        "id": 7,
-        "nome_instituto": "Instituto de Física",
-        "sigla":"IFI"
+      "id": 6,
+      "nome_instituto": "Instituto de Filosofia e Ciências Humanas",
+      "sigla": "IFCH"
     },
     {
-        "id": 8,
-        "nome_instituto": "Instituto de Geociências",
-        "sigla":"IGE"
+      "id": 7,
+      "nome_instituto": "Instituto de Física",
+      "sigla": "IFI"
     },
     {
-        "id": 9,
-        "nome_instituto": "Matemática, Estatística e Computação Científica",
-        "sigla":"IME"
+      "id": 8,
+      "nome_instituto": "Instituto de Geociências",
+      "sigla": "IGE"
     },
     {
-        "id": 10,
-        "nome_instituto": "Instituto de Química",
-        "sigla":"IQM"
+      "id": 9,
+      "nome_instituto": "Matemática, Estatística e Computação Científica",
+      "sigla": "IME"
     },
     {
-        "id": 11,
-        "nome_instituto": "Faculdade de Ciências Aplicadas",
-        "sigla":"FCA"
+      "id": 10,
+      "nome_instituto": "Instituto de Química",
+      "sigla": "IQM"
     },
     {
-        "id": 12,
-        "nome_instituto": "Faculdade de Ciências Farmacêuticas",
-        "sigla":"FCF"
+      "id": 11,
+      "nome_instituto": "Faculdade de Ciências Aplicadas",
+      "sigla": "FCA"
     },
     {
-        "id": 13,
-        "nome_instituto": "Faculdade de Enfermagem",
-        "sigla":"FENF"
+      "id": 12,
+      "nome_instituto": "Faculdade de Ciências Farmacêuticas",
+      "sigla": "FCF"
     },
     {
-        "id": 14,
-        "nome_instituto": "Faculdade de Eng. de Alimentos",
-        "sigla":"FEA"
+      "id": 13,
+      "nome_instituto": "Faculdade de Enfermagem",
+      "sigla": "FENF"
     },
     {
-        "id": 15,
-        "nome_instituto": "Faculdade de Eng. Agrícola",
-        "sigla":"FEAGRI"
+      "id": 14,
+      "nome_instituto": "Faculdade de Eng. de Alimentos",
+      "sigla": "FEA"
     },
     {
-        "id": 16,
-        "nome_instituto": "Faculdade de Eng. Civil, Arquitetura e Urbanismo",
-        "sigla":"FEC"
+      "id": 15,
+      "nome_instituto": "Faculdade de Eng. Agrícola",
+      "sigla": "FEAGRI"
     },
     {
-        "id": 17,
-        "nome_instituto": "Faculdade de Eng. Elétrica e de Computação",
-        "sigla":"FEE"
+      "id": 16,
+      "nome_instituto": "Faculdade de Eng. Civil, Arquitetura e Urbanismo",
+      "sigla": "FEC"
     },
     {
-        "id": 18,
-        "nome_instituto": "Faculdade de Eng. Mecânica",
-        "sigla":"FEM"
+      "id": 17,
+      "nome_instituto": "Faculdade de Eng. Elétrica e de Computação",
+      "sigla": "FEE"
     },
     {
-        "id": 19,
-        "nome_instituto": "Faculdade de Eng. Química",
-        "sigla":"FEQ"
+      "id": 18,
+      "nome_instituto": "Faculdade de Eng. Mecânica",
+      "sigla": "FEM"
     },
     {
-        "id": 20,
-        "nome_instituto": "Faculdade de Ciências Médicas",
-        "sigla":"FCM"
+      "id": 19,
+      "nome_instituto": "Faculdade de Eng. Química",
+      "sigla": "FEQ"
     },
     {
-        "id": 21,
-        "nome_instituto": "Faculdade de Educação Física",
-        "sigla":"FEF"
+      "id": 20,
+      "nome_instituto": "Faculdade de Ciências Médicas",
+      "sigla": "FCM"
     },
     {
-        "id": 22,
-        "nome_instituto": "Faculdade de Odontologia de Piracicaba",
-        "sigla":"FOP"
+      "id": 21,
+      "nome_instituto": "Faculdade de Educação Física",
+      "sigla": "FEF"
     },
     {
-        "id": 23,
-        "nome_instituto": "Faculdade de Educação",
-        "sigla":"FE"
+      "id": 22,
+      "nome_instituto": "Faculdade de Odontologia de Piracicaba",
+      "sigla": "FOP"
     },
     {
-        "id": 23,
-        "nome_instituto": "Faculdade de Tecnologia",
-        "sigla":"FT"
+      "id": 23,
+      "nome_instituto": "Faculdade de Educação",
+      "sigla": "FE"
+    },
+    {
+      "id": 23,
+      "nome_instituto": "Faculdade de Tecnologia",
+      "sigla": "FT"
     }
   ],
   "categorias": [
-      {
-        "id":1,
-        "nome": "Palestra"
-      },
-      {
-        "id":2,
-        "nome": "Show"
+    {
+      "id": 1,
+      "nome": "Palestra"
     },
     {
-        "id":3,
-        "nome": "Workshop"
+      "id": 2,
+      "nome": "Show"
     },
     {
-        "id":4,
-        "nome": "Iniciacao Cientifica"
+      "id": 3,
+      "nome": "Workshop"
     },
     {
-        "id":5,
-        "nome": "Noticia"
+      "id": 4,
+      "nome": "Iniciacao Cientifica"
+    },
+    {
+      "id": 5,
+      "nome": "Noticia"
+    }
+  ],
+  "logados": [
+    {
+      "id": 1
     }
   ]
 }

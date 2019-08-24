@@ -2,6 +2,9 @@ import { createAppContainer, createStackNavigator } from 'react-navigation';
 import Home from './screens/Home';
 import Login from './screens/Login';
 import Details from './screens/Details';
+import Create from './screens/Create';
+import Delete from './screens/Delete';
+import Edit from './screens/Edit';
 
 const StackNavigator = createStackNavigator(
     {
@@ -14,9 +17,18 @@ const StackNavigator = createStackNavigator(
         Details: {
             screen: Details,
         },
+        Create: {
+            screen: Create,
+        },
+        Edit: {
+            screen: Edit,
+        },
+        Delete: {
+            screen: Delete,
+        },
     },
     {
-        initialRouteName: 'Home',
+        initialRouteName: 'Login',
         headerMode: 'none',
         defaultNavigationOptions: () => {
             return {

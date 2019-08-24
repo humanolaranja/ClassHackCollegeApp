@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, FlatList, Dimensions, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, View, Text, FlatList, Dimensions, TouchableWithoutFeedback, RefreshControl } from 'react-native';
 import { Container, Header, Content, Footer, FooterTab, Button } from 'native-base';
 // import Geocoder from 'react-native-geocoder';
+import ActionButton from 'react-native-action-button';
 import openMap from 'react-native-open-maps';
 import axios from 'axios';
 
@@ -14,7 +15,8 @@ const adjustSize = width - 100;
 
 export default class Home extends Component {
   state = {
-    data: []
+    data: [],
+    isFetching: false
   }
 
   _goToYosemite() {
@@ -30,45 +32,56 @@ export default class Home extends Component {
     //   color={'#bdc3c7'}
     //   onPress={this._goToYosemite}
     //   title="Click To Open Maps 🗺" />
-    // <Button
-    //   color={'#bdc3c7'}
-    //   onPress={this.props.navigation.navigate('Login')}
-    //   title="Go to Login" /> */}
+  }
+
+  fetchData() {
+    this.setState(
+      { isFetching: true },
+      () => {
+        axios.get(`http://10.0.2.2:3000/eventos`).then((response) => {
+          this.setState({ data: response.data, isFetching: false })
+        })
+      }
+    );
   }
 
   componentDidMount() {
-    // this._goToYosemite();
-    axios.get(`http://10.0.2.2:3000/eventos`).then((response) => {
-      this.setState({ data: response.data })
-    })
+    this.fetchData();
   }
 
   render() {
-    console.warn(this.state.data);
-
     return (
       <Container>
-        <Content>
-          <FlatList
-            data={this.state.data}
-            renderItem={({ item }) => (
-              <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('Details')}>
-                <View style={[styles.cardContainer]}>
-                  <View style={styles.title}>
-                    <Text style={[styles.titleText]}> {item.titulo} </Text>
-                  </View>
-                  <View style={styles.title}>
-                    <Text style={[styles.titleText]}> {item.local} </Text>
-                  </View>
-                  <View style={styles.title}>
-                    <Text style={[styles.titleText]}> {item.data} </Text>
-                  </View>
+        <Text style={{ fontSize: 34, color: 'black', fontWeight: 'bold' }}>
+          Eventos
+        </Text>
+        <ActionButton
+          style={{ zIndex: 100 }}
+          buttonColor="#1878BA"
+          onPress={() => { this.props.navigation.navigate('Create') }}
+          offsetY={70}
+        />
+        <FlatList
+          refreshControl={<RefreshControl refreshing={this.state.isFetching} onRefresh={() => this.fetchData()} />}
+          data={this.state.data}
+          contentContainerStyle={{ paddingBottom: 80 }}
+          renderItem={({ item }) => (
+            <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('Details', item)}>
+              <View style={[styles.cardContainer]}>
+                <View style={styles.title}>
+                  <Text style={[styles.titleText]}> {item.titulo} </Text>
                 </View>
-              </TouchableWithoutFeedback>
-            )}
-            keyExtractor={(item, index) => `list-item-${index}`}
-          />
-        </Content>
+                <View style={styles.title}>
+                  <Text style={[styles.titleText]}> {item.local} </Text>
+                </View>
+                <View style={styles.title}>
+                  <Text style={[styles.titleText]}> {item.data} </Text>
+                </View>
+              </View>
+            </TouchableWithoutFeedback>
+          )}
+          keyExtractor={(item, index) => `list-item-${index}`}
+        />
         <Footer>
           <FooterTab style={{ backgroundColor: "#FFF" }}>
             <Button>
@@ -77,7 +90,7 @@ export default class Home extends Component {
             <Button>
               <Text>Notícias</Text>
             </Button>
-            <Button active>
+            <Button>
               <Text>Eventos</Text>
             </Button>
             <Button>
@@ -119,7 +132,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: colorStyle.TextLigth.backgroundColor,
     padding: 10,
-    margin: 50,
+    marginHorizontal: 50,
+    marginVertical: 10,
     width: adjustSize,
     height: 200,
     flexDirection: 'column',

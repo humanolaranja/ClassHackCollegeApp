@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#E8E8E8',
     },
     ButtomPrimary: {
-        backgroundColor: '#24BBCA',
+        backgroundColor: '#1878BA',
     },
     ButtomSecondary: {
         backgroundColor: '#F6B007',

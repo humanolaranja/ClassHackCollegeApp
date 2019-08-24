@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { View, ImageBackground, Image, StyleSheet, Text, StatusBar } from 'react-native';
 import { Item, Input, Label } from 'native-base';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { StackActions, NavigationActions } from 'react-navigation';
 import colorStyle from '../styles/Color';
 import * as EButton from '../components/Buttons';
 import axios from 'axios';
@@ -12,7 +13,7 @@ export default class Login extends Component {
         email: '',
         errorMail: '',
         loading: false,
-        senha: '12345'
+        senha: ''
     }
 
     checkUser = () => {
@@ -20,12 +21,32 @@ export default class Login extends Component {
             axios.get(`http://10.0.2.2:3000/usuarios?email=${decodeURIComponent(this.state.email)}`).then((response) => {
                 this.setState({ loading: false });
                 if(response.data.length > 0 && this.state.senha == 12345) {
-                    this.props.navigation.navigate('Home');
+                    axios.post(`http://10.0.2.2:3000/logados`).then(() => {
+                        this.props.navigation.navigate('Home');
+                    })
                 } else {
-                    this.setState({ errorEmail: "Usuário não encontrado" });
+                    this.setState({ errorEmail: "Usuário não encontrado, verifique email ou senha" });
                 }
             });
         }) 
+    }
+
+    componentDidMount() {
+        axios.get(`http://10.0.2.2:3000/logados?id<2`).then((response) => {
+            let goHome = false;
+            for (let i = 0; i < response.data.length; i++) {
+                if(response.data[i].id === 1 | response.data[i].id === 2) {
+                    goHome = true;
+                }
+            }
+            if(goHome) {
+                const resetAction = StackActions.reset({
+                    index: 0,
+                    actions: [NavigationActions.navigate({ routeName: 'Home' })],
+                });
+                this.props.navigation.dispatch(resetAction);
+            }
+        });
     }
 
     render() {
@@ -33,7 +54,7 @@ export default class Login extends Component {
             <KeyboardAwareScrollView contentContainerStyle={{ flexGrow: 1 }} keyboardShouldPersistTaps="handled" bounces={false} >
                 <StatusBar translucent backgroundColor="rgba(255, 255, 255, 0)" barStyle="light-content" />
                 <ImageBackground
-                    source={require('../assets/images/bg.jpg')}
+                    source={require('../assets/images/bg.jpeg')}
                     style={{ width: '100%', height: '100%' }}
                 >
                     <View style={styles.container}>
@@ -43,6 +64,7 @@ export default class Login extends Component {
                                 resizeMode="contain"
                                 style={{ height: 120, width: 120 }}
                             />
+                            <Text style={{ fontSize: 34, color: 'white', fontWeight: 'bold' }}> CollegeApp </Text>
                         </View>
                         <View style={{ display: 'flex', justifyContent: 'flex-end' }}>
                             <Text style={{ fontSize: 34, color: 'white', fontWeight: 'bold' }}>
