@@ -70,6 +70,15 @@ export class Primary extends Component {
     }
 }
 
+export class Secondary extends Component {
+    render() {
+        return <Primary {...this.props} background={this.getBackgroundColor} />;
+    }
+    getBackgroundColor(disabled) {
+        return disabled ? colorStyle.Disable.backgroundColor : colorStyle.ButtomSecondary.backgroundColor;
+    }
+}
+
 
 export const Text = styled.Text`
     color: #fff;

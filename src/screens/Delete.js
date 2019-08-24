@@ -53,6 +53,13 @@ export default class Edit extends Component {
                         >
                             Sim
                         </EButton.Primary>
+                        <EButton.Secondary
+                            loading={false}
+                            onPress={() => this.props.navigation.goBack()}
+                            style={[styles.button, styles.containerCenter]}
+                        >
+                            Não
+                        </EButton.Secondary>
                     </View>
                 </View>
             </KeyboardAwareScrollView>

@@ -90,11 +90,13 @@ export default class Home extends Component {
             <Button>
               <Text>Notícias</Text>
             </Button>
-            <Button>
-              <Text>Eventos</Text>
+            <Button style={{
+									backgroundColor: "#1878BA"
+								}}>
+              <Text style={{color: 'white'}}>Eventos</Text>
             </Button>
             <Button>
-              <Text>Contact</Text>
+              <Text>Notificações</Text>
             </Button>
           </FooterTab>
         </Footer>
