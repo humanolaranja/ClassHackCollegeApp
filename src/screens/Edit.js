@@ -76,7 +76,7 @@ export default class Edit extends Component {
                             </View>
                             <View style={{ marginBottom: 6 }}>
                                 <Item floatingLabel style={{ width: '100%' }} error={!!this.state.errorEmail}>
-                                    <Label style={styles.textColor}> Titulo </Label>
+                                    <Label style={styles.textColor}> Data </Label>
                                     <Input
                                         style={styles.textColor}
                                         value={this.state.data}

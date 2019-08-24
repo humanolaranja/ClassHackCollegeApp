@@ -1,20 +1,44 @@
 {
   "eventos": [
     {
-      "titulo": "Beethoven para o futuro do presente",
+      "id": 1,
+      "titulo": "Beethoven para o futuro propõe diálogo com a composição contemporânea brasileira",
+      "id_instituto": 1,
+      "id_usuario": 2,
       "local": "Instituto de Artes  - Rua Elis Regina, 50 Cidade Universitária - Zeferino Vaz, Campinas - SP, 13083-854",
       "data": "13/08/2019",
-      "id": 1
+      "hora_inicial": "19:00",
+      "hora_final": "21:00",
+      "preco": 0,
+      "descricao": "O ciclo de sonatas de Beethoven para violoncelo e piano pode ser apreciado em sua totalidade esta semana, em Campinas.",
+      "categoria": 2,
+      "url": "https://www.unicamp.br/unicamp/noticias/2019/08/13/beethoven-para-o-futuro-propoe-dialogo-com-composicao-contemporanea-brasileira",
+      "likedby": [
+        1,
+        2
+      ]
     },
     {
-      "titulo": "Congresso de Ciências do Trabalho, Meio Ambiente, Direito e Saúde",
+      "id": 2,
+      "titulo": "Congresso de Ciências do Trabalho, Meio Ambiente, Direito e Saúde terá a participação de docentes da Unicamp",
+      "id_instituto": 1,
+      "id_usuario": 2,
       "local": "Largo São Francisco, 95 - Centro, São Paulo - SP, 01005-010",
-      "data": "26/08/20",
-      "id": 2
+      "data": "26/08/19",
+      "hora_inicial": "14:00",
+      "hora_final": "16:00",
+      "preco": 0,
+      "descricao": "No evento, o professor Ricardo Antunes (Unicamp) abordará o tema “Uberização do trabalho. Já o médico Gastão Wagner (Unicamp) falará sobre “A Previdência e a Saúde”.",
+      "categoria": 2,
+      "url": "https://www.congressointernacionaldotrabalho.com/como-chegar",
+      "likedby": [
+        1,
+        2
+      ]
     },
     {
       "id": 3,
-      "titulo": "Encontro Nacional das Equipes de Ajuda no Brasil",
+      "titulo": "III Encontro Nacional das Equipes de Ajuda no Brasil",
       "id_instituto": 23,
       "id_usuario": 3,
       "local": "Avenida Érico Veríssimo, 500 Cidade Universitária, Zeferino Vaz - Barão Geraldo, Campinas - SP, 13083-851",
@@ -29,16 +53,6 @@
         1,
         2
       ]
-    },
-    {
-      "titulo": "ClassHack",
-      "id": 4
-    },
-    {
-      "titulo": "Rock",
-      "local": "Rio de Janeiro - RJ",
-      "data": "10/10/2019",
-      "id": 5
     }
   ],
   "usuarios": [
