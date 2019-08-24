@@ -4,7 +4,7 @@ import { Button, View } from 'native-base';
 import { UIActivityIndicator } from 'react-native-indicators';
 import styled from 'styled-components/native';
 
-import colorStyle from '../../styles/Color';
+import colorStyle from '../styles/Color';
 
 const styles = StyleSheet.create({
     buttonContainer: {
